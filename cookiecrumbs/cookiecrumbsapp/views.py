@@ -1,3 +1,11 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+def cookieCrumbs(request):
+    return HttpResponse("cookieCrumbs")
+
+def getTrail(request):
+    return HttpResponse("getTrail")
+
+def cookieTrail(request):
+    return HttpResponse("cookieTrail")
