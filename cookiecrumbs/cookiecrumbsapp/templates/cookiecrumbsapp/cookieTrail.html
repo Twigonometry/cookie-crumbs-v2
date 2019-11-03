@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Co-authored by Mac Goodwin, Chloe Jambor, Nicki Ridsdale, Sam West">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <title>Cookie Crumbs</title>
+        
+        {% load static %}
+
+        <link rel="stylesheet" type="text/css" href="{% static 'cookiecrumbsapp/style.css' %}">
+    </head>
+    
+    <body>
+        <div class="banner">
+            {% load static %}
+            <img src="{% static 'images/banner.png' %}">
+        </div>
+
+
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Value</th>
+                    <th scope="col">Domain</th>
+                    <th scope ="col">Expires</th>
+                    <th scope="col">Same Site</th>
+                </tr>
+            </thead>
+                <tbody>
+                    {% for cookie in cookieObjects %}                    
+                        <tr>
+                        <th scope="row">{{cookie.name}}</th>
+                        <td>{{cookie.value}}</td>
+                        <td>{{cokie.domain}}</td>
+                        <td>{{cookie.expires}}</td>              
+                        <td>{{cookie.same_site}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+        </table>
+    </body>
+</html>
