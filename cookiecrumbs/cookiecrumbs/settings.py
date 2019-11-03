@@ -54,7 +54,7 @@ ROOT_URLCONF = 'cookiecrumbs.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['cookiecrumbsapp/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
