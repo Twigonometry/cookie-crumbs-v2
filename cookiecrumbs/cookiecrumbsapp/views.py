@@ -13,8 +13,9 @@ def getTrail(request):
     chrome.Network.enable()
     chrome.Page.enable()
 
-    #temporary call to google.com
-    chrome.Page.navigate(url="https://www.google.com/")
+    #gets target url and visits it
+    target = request.GET.get('target')
+    chrome.Page.navigate(url=target)
     chrome.wait_event("Page.frameStoppedLoading",timeout=60)
 
     #get cookies

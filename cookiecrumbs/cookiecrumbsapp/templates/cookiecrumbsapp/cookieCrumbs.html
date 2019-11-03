@@ -41,12 +41,12 @@
         <div class="center">
             <form action={% url 'getTrail' %}  method="GET">
                 <div class="form-group row">
-                    <label for="find" class="col-sm-1">Find Cookies</label>
+                    <label for="target" class="col-sm-1">Find Cookies</label>
                     <div class="col-sm-7">
-                        <input type="text" class="form-control" id="find" placeholder="Add URL...">
+                        <input type="text" class="form-control" name="target" id="target" placeholder="Add URL...">
                     </div>
                     <div class="col-sm-2">
-                        <button type="submit" class="btn">Search</button>
+                        <input type="submit" class="btn">Search</input>
                     </div>
                 </div>
             </form>
