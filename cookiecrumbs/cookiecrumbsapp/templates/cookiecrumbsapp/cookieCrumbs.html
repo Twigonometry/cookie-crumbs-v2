@@ -10,17 +10,32 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
         <title>Cookie Crumbs</title>
-        
-        
-        {% load static %}
 
-        <link rel="stylesheet" type="text/css" href="{% static 'cookiecrumbsapp/style.css' %}">
+        <style type="text/css"> 
+            .banner p{
+                padding: 50px;
+                text-align: center;
+                font-family: 'Consolas';
+                background-color: rgb(205, 137, 78);
+                color: white;
+                font-size: 7em;
+            }
+
+            .center{
+                margin: 7.5% 20% 0 20%;
+                padding: 0;
+                width: 75%;
+            }
+
+            .table{
+                width: 100;
+            }
+        </style>
     </head>
     
     <body>
-        <div class="banner">
-            {% load static %}
-            <img src="{% static 'images/banner.png' %}">
+        <div class="banner">       
+            <span><p>>cookiecrumbs</p>
         </div>
 
         <div class="center">
