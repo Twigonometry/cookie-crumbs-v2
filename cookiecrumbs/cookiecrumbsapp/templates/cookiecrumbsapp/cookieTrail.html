@@ -27,8 +27,13 @@
                 width: 75%;
             }
 
-            .table{
-                width: 100;
+            td {
+                white-space: normal !important; 
+                word-wrap: break-word;  
+            }
+
+            table {
+                table-layout: fixed;
             }
         </style>
     </head>
@@ -44,7 +49,7 @@
                     <th scope="col">Value</th>
                     <th scope="col">Domain</th>
                     <th scope ="col">Expires</th>
-                    <th scope="col">Same Site</th>
+                    <th scope='col'>Secure</th>
                 </tr>
             </thead>
                 <tbody>
@@ -52,9 +57,9 @@
                         <tr>
                         <th scope="row">{{cookie.name}}</th>
                         <td>{{cookie.value}}</td>
-                        <td>{{cokie.domain}}</td>
-                        <td>{{cookie.expires}}</td>              
-                        <td>{{cookie.same_site}}</td>
+                        <td>{{cookie.domain}}</td>
+                        <td>{{cookie.expires}}</td>        
+                        <td>{{cookie.secure}}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
