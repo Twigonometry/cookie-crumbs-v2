@@ -37,4 +37,9 @@ def cookieTrail(request):
     for cookie in cookieDump['result']['cookies']:
        cookieObjects.append(cookie)
 
+    #insecureTotal = 0
+    #for cookie in cookieDump:
+    #    if cookie.secure == False:
+    #        insecureTotal+=1
+
     return render(request, 'cookiecrumbsapp/cookieTrail.html', {'cookieObjects':cookieObjects})
