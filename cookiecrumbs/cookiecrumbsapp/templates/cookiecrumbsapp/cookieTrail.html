@@ -11,19 +11,32 @@
 
         <title>Cookie Crumbs</title>
         
-        {% load static %}
+        <style type="text/css"> 
+            .banner p{
+                padding: 50px;
+                text-align: center;
+                font-family: 'Consolas';
+                background-color: rgb(205, 137, 78);
+                color: white;
+                font-size: 7em;
+            }
 
-        <link rel="stylesheet" type="text/css" href="{% static 'cookiecrumbsapp/style.css' %}">
+            .center{
+                margin: 7.5% 20% 0 20%;
+                padding: 0;
+                width: 75%;
+            }
+
+            .table{
+                width: 100;
+            }
+        </style>
     </head>
     
     <body>
-        <div class="banner">
-            {% load static %}
-            <img src="{% static 'images/banner.png' %}">
+        <div class="banner">       
+            <span><p>>cookiecrumbs</p>
         </div>
-
-
-
         <table class="table">
             <thead>
                 <tr>
