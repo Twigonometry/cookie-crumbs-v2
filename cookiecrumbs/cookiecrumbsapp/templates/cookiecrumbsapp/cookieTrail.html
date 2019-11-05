@@ -12,13 +12,18 @@
         <title>Cookie Crumbs</title>
         
         <style type="text/css"> 
-            .banner p{
+            .banner {
                 padding: 50px;
                 text-align: center;
                 font-family: 'Consolas';
                 background-color: rgb(205, 137, 78);
                 color: white;
                 font-size: 7em;
+                width: 100%;
+            }
+
+            .header {
+                text-align: center;
             }
 
             .center{
@@ -40,7 +45,11 @@
     
     <body>
         <div class="banner">       
-            <span><p>>cookiecrumbs</p>
+            <span style="color: white;">></span><span style="color:rgb(135, 66, 26);">cookie</span><span style="color: white;">crumbs</span>
+        </div>
+        <div class="header">
+            <h2>Your cookie trail for:</h2>
+            <h3>URL will go here</h3>
         </div>
         <table class="table">
             <thead>
@@ -66,5 +75,7 @@
         </table>
         <p>Total insecure cookies:</p>
         <p>{{insecureTotal}}</p>
+        <p>Total session cookies:</p>
+        <p>{{sessionTotal}}</p>
     </body>
 </html>
