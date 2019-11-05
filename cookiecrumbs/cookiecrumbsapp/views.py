@@ -37,9 +37,12 @@ def cookieTrail(request):
     for cookie in cookieDump['result']['cookies']:
        cookieObjects.append(cookie)
 
-    #insecureTotal = 0
-    #for cookie in cookieDump:
-    #    if cookie.secure == False:
-    #        insecureTotal+=1
+    insecureTotal = 0
+    for cookie in cookieObjects:
+        if cookie['secure'] == False:
+            insecureTotal+=1
 
-    return render(request, 'cookiecrumbsapp/cookieTrail.html', {'cookieObjects':cookieObjects})
+    #try figuring out what type the variable 'cookie' is - error message = Error value: 'dict' object has no attribute 'secure'
+    #try inside view, commenting out code above and replicating it there
+
+    return render(request, 'cookiecrumbsapp/cookieTrail.html', {'cookieObjects':cookieObjects, 'insecureTotal':insecureTotal})

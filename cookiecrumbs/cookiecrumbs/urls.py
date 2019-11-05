@@ -16,8 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-#defining 404 handler
+#defining error handlers
 handler404 = 'cookiecrumbs.views.handler404'
+handler500 = 'cookiecrumbs.views.handler500'
 
 urlpatterns = [
     path('cookiecrumbsapp/', include('cookiecrumbsapp.urls')),

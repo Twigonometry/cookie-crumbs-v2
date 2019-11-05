@@ -54,7 +54,7 @@
             </thead>
                 <tbody>
                     {% for cookie in cookieObjects %}                    
-                        <tr>
+                    <tr>
                         <th scope="row">{{cookie.name}}</th>
                         <td>{{cookie.value}}</td>
                         <td>{{cookie.domain}}</td>
@@ -64,5 +64,7 @@
                     {% endfor %}
                 </tbody>
         </table>
+        <p>Total insecure cookies:</p>
+        <p>{{insecureTotal}}</p>
     </body>
 </html>
